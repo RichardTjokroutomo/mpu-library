@@ -1,0 +1,11 @@
+- These are the libraries made to work with the MPU-6050 sensor.
+- The libraries work together to prevent the gyroscope's readings to drift away from the actual values.
+- The gyroscope gives readings with some errors. [e.g. when the sensor is placed at 0 degree inclination, the sensor can give out a reading of 0.2 degrees]
+
+- How it works
+  * The mpuCalibrator will obtain the mean error and the standard deviation in the readings.
+  * If the value read is still within mean +- 30*standard deviation, then it is an error, therefore the code will correct it.
+  * If otherwise, the result is an outlier. This means that it is not an error, rather the orientation of the sensor has changed. Therefore, the codde will not correct the readings.
+  * In AS Level statistics, a teacher of mine once said that a value greater than mean + 3*standard deviation or less than mean - 3*standard deviation is an outlier.
+  * However, experimentally, it is found that, for the case of MPU-6050 sensor, 30*standard deviation is more appropiate.
+
