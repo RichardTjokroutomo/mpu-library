@@ -7,5 +7,5 @@ This is an Arduino library for the MPU6050 sensor, mounted on a GY521 breakout b
 
 ### additional notes
 > - This is a high school project I made back in 2020, so I have forgotten the specific details on the code. 
-> - I pushed this to my repository in case someone in the future wants to use it in his/her Arduino project.
+> - I created a github repo for this in case someone in the future wants to use it in his/her Arduino project. 
 > - For some additional details, please read `project description.txt`
